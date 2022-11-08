@@ -399,9 +399,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   profile: {fileID: 721815992}
   profileChoices:
-  - {fileID: 21300000, guid: d3d37116ba56d054ead1c6c41765fdb0, type: 3}
-  - {fileID: 21300000, guid: 48abb5a83164b974da931531409c45d1, type: 3}
-  - {fileID: 21300000, guid: 00c99a0d1581d4e4893eae4de0d510bd, type: 3}
+  - {fileID: 21300000, guid: ee1b3bbb03bd6c343838e234924ee206, type: 3}
+  - {fileID: 21300000, guid: d0cdae1b2a74a5a4886f910ea68226cf, type: 3}
+  - {fileID: 21300000, guid: e13c9298cf141254e91724bead04230c, type: 3}
   currentProfile: 0
 --- !u!114 &721815992
 MonoBehaviour:
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d3d37116ba56d054ead1c6c41765fdb0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee1b3bbb03bd6c343838e234924ee206, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
