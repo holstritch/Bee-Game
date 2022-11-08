@@ -5,13 +5,21 @@ using UnityEngine.UI;
 
 public class ProfileChanger : MonoBehaviour
 {
-    // Make an array with all the profile images
+    public Image profile;
+    public List<Sprite> profileChoices;
+    private int currentProfile = 0;
 
-    // Get image
-
-    void ChangeImage()
+    public void ChangeImage()
     {
-        
+        currentProfile++;
+
+        if(currentProfile >= profileChoices.Count)
+        {
+            currentProfile = 0;
+        }
+
+        profile.sprite = profileChoices[currentProfile];
+
     }
 
     
