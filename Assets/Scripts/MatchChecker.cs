@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MatchChecker : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class MatchChecker : MonoBehaviour
     public ProfileChanger profileChanger2;
     public int bee1;
     public int bee2;
+
+    public int honey = 0;
+    public TextMeshProUGUI honeyText;
+
     
     public void CheckForMatch() 
     {
@@ -20,6 +25,8 @@ public class MatchChecker : MonoBehaviour
         if(bee1 == bee2)
         {
             Debug.Log("It's a match!");
+            honey = honey + 100;
+            UpdateUI();
             // Remove these bees from the array
             // Add win sound effect
         }
@@ -30,5 +37,10 @@ public class MatchChecker : MonoBehaviour
             // Add incorrect sound effect
         }
         
+    }
+
+    private void UpdateUI() 
+    {
+      honeyText.text = "Honey: " + honey;
     }
 }
