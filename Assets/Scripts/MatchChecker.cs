@@ -28,6 +28,9 @@ public class MatchChecker : MonoBehaviour
             honey = honey + 100;
             UpdateUI();
             // Remove these bees from the array
+
+           
+
             // Add win sound effect
         }
 
