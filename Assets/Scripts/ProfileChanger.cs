@@ -9,13 +9,26 @@ public class ProfileChanger : MonoBehaviour
     public List<Sprite> profileChoices;
     private int currentProfile = 0;
 
-    public void ChangeImage()
+    public void ChangeImageUp()
     {
         currentProfile++;
 
         if(currentProfile >= profileChoices.Count)
         {
             currentProfile = 0;
+        }
+
+        profile.sprite = profileChoices[currentProfile];
+
+    }
+
+    public void ChangeImageDown()
+    {
+        currentProfile--;
+
+        if(currentProfile < 0)
+        {
+            currentProfile = profileChoices.Count - 1; 
         }
 
         profile.sprite = profileChoices[currentProfile];
