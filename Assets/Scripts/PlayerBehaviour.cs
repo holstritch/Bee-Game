@@ -26,6 +26,11 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
+    public void DrinkCoffeeForEnergy()
+    {
+        PlayerHeal(10);
+        Debug.Log(GameManager.gameManager._playerHealth.Health);
+    }
     private void PlayerTakeDamage(int damage)
     {
         GameManager.gameManager._playerHealth.DamageHealth(damage);
