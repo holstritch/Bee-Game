@@ -34,6 +34,15 @@ public class ProfileChanger : MonoBehaviour
         profile.sprite = profileChoices[currentProfile];
 
     }
-
     
+    public void RemoveCurrentProfile()
+    {
+        // Remove this profile from the list
+        profileChoices.RemoveAt(currentProfile);
+        Debug.Log("Removed current profile");
+        
+        // Move automatically to another profile after removing
+        profile.sprite = profileChoices[currentProfile];
+    }
+
 }

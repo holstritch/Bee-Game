@@ -27,7 +27,7 @@ public class MatchChecker : MonoBehaviour
             Debug.Log("It's a match!");
             honey = honey + 100;
             UpdateUI();
-            // Remove these bees from the array
+            // Remove these bees from the list
 
            
 
