@@ -28,8 +28,8 @@ public class MatchChecker : MonoBehaviour
             honey = honey + 100;
             UpdateUI();
             // Remove these bees from the list
-
-           
+            profileChanger1.RemoveCurrentProfile();
+            profileChanger2.RemoveCurrentProfile();
 
             // Add win sound effect
         }
@@ -41,6 +41,7 @@ public class MatchChecker : MonoBehaviour
         }
         
     }
+
 
     private void UpdateUI() 
     {
