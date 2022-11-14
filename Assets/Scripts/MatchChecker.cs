@@ -17,8 +17,8 @@ public class MatchChecker : MonoBehaviour
     public void CheckForMatch() 
     {
         // Check which bee is in each slot
-        bee1 = profileChanger1.currentProfile;  
-        bee2 = profileChanger2.currentProfile; 
+        bee1 = profileChanger1.randomProfile;  
+        bee2 = profileChanger2.randomProfile; 
         
         // Check if the bees are a match or not
 

@@ -8,10 +8,18 @@ public class ProfileChanger : MonoBehaviour
 {
     public Image profile;
     public List<Sprite> profileChoices;
-    public int currentProfile = 0;
+    //public int currentProfile = 0;
+    public int randomProfile;
     public GameObject winText;
-    
 
+
+    public void ChangeToRandomProfile()
+    {
+        randomProfile = Random.Range (0, profileChoices.Count);
+        profile.sprite = profileChoices[randomProfile];
+    }
+    
+    /*
     public void ChangeImageUp() // Go to next profile image
     {
         currentProfile++;
@@ -37,15 +45,15 @@ public class ProfileChanger : MonoBehaviour
         profile.sprite = profileChoices[currentProfile];
 
     }
+    */
     
     public void RemoveCurrentProfile()
     {
         // Remove this profile from the list
-        profileChoices.RemoveAt(currentProfile);
-        Debug.Log("Removed current profile");
+        profileChoices.RemoveAt(randomProfile);
         
         // Move automatically to another profile after removing
-        profile.sprite = profileChoices[0];
+        profile.sprite = profileChoices[randomProfile];
     }
 
     public void WinChecker()
