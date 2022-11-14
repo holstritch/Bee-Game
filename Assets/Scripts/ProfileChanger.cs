@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ProfileChanger : MonoBehaviour
 {
     public Image profile;
     public List<Sprite> profileChoices;
     public int currentProfile = 0;
+    public GameObject winText;
+    
 
     public void ChangeImageUp() // Go to next profile image
     {
@@ -50,6 +53,7 @@ public class ProfileChanger : MonoBehaviour
         if (profileChoices.Count == 1)
         {
             Debug.Log("These are the last two profiles, you win");
+            winText.SetActive(true);
         }
     }
 
