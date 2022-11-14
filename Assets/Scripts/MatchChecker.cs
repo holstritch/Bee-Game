@@ -39,7 +39,9 @@ public class MatchChecker : MonoBehaviour
             Debug.Log("These two aren't a match.");
             // Add incorrect sound effect
         }
-        
+
+        // Check if these are the last two profiles to match
+        profileChanger1.WinChecker();         
     }
 
 

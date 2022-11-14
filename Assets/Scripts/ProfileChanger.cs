@@ -42,7 +42,15 @@ public class ProfileChanger : MonoBehaviour
         Debug.Log("Removed current profile");
         
         // Move automatically to another profile after removing
-        profile.sprite = profileChoices[currentProfile];
+        profile.sprite = profileChoices[0];
+    }
+
+    public void WinChecker()
+    {
+        if (profileChoices.Count == 1)
+        {
+            Debug.Log("These are the last two profiles, you win");
+        }
     }
 
 }
