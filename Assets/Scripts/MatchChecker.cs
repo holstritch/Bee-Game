@@ -9,7 +9,6 @@ public class MatchChecker : MonoBehaviour
     public ProfileChanger profileChanger2;
     public int bee1;
     public int bee2;
-
     public int honey = 0;
     public TextMeshProUGUI honeyText;
 
@@ -21,27 +20,29 @@ public class MatchChecker : MonoBehaviour
         bee2 = profileChanger2.randomProfile; 
         
         // Check if the bees are a match or not
-
         if(bee1 == bee2)
         {
-            Debug.Log("It's a match!");
+            // Increase honey
             honey = honey + 100;
             UpdateUI();
+
             // Remove these bees from the list
             profileChanger1.RemoveCurrentProfile();
             profileChanger2.RemoveCurrentProfile();
 
-            // Add win sound effect
+            // Add cash sound effect
         }
 
         if(bee1 != bee2)
         {
             Debug.Log("These two aren't a match.");
+            
             // Add incorrect sound effect
         }
 
         // Check if these are the last two profiles to match
-        profileChanger1.WinChecker();         
+        profileChanger1.WinChecker(); 
+        
     }
 
 

@@ -11,11 +11,14 @@ public class ProfileChanger : MonoBehaviour
     //public int currentProfile = 0;
     public int randomProfile = 0;
     public GameObject winText;
-
+    public Button matchButton;
 
     public void ChangeToRandomProfile()
     {
-        randomProfile = Random.Range (0, profileChoices.Count);
+        // Get a random profile
+        randomProfile = Random.Range(0, profileChoices.Count);
+        
+        // Change the profile sprite
         profile.sprite = profileChoices[randomProfile];
     }
     
@@ -63,6 +66,10 @@ public class ProfileChanger : MonoBehaviour
         {
             Debug.Log("These are the last two profiles, you win");
             winText.SetActive(true);
+
+            // Stop player clicking match button again
+            matchButton.interactable = false;
+
         }
     }
 
