@@ -9,7 +9,7 @@ public class ProfileChanger : MonoBehaviour
     public Image profile;
     public List<Sprite> profileChoices;
     //public int currentProfile = 0;
-    public int randomProfile;
+    public int randomProfile = 0;
     public GameObject winText;
 
 
@@ -51,8 +51,9 @@ public class ProfileChanger : MonoBehaviour
     {
         // Remove this profile from the list
         profileChoices.RemoveAt(randomProfile);
-        
+
         // Move automatically to another profile after removing
+        ChangeToRandomProfile();
         profile.sprite = profileChoices[randomProfile];
     }
 
