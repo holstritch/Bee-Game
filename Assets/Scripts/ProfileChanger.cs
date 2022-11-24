@@ -8,21 +8,11 @@ public class ProfileChanger : MonoBehaviour
 {
     public Image profile;
     public List<Sprite> profileChoices;
-    //public int currentProfile = 0;
-    public int randomProfile = 0;
+    public int currentProfile = 0;
     public GameObject winText;
     public Button matchButton;
+     //public int randomProfile = 0;
 
-    public void ChangeToRandomProfile()
-    {
-        // Get a random profile
-        randomProfile = Random.Range(0, profileChoices.Count);
-        
-        // Change the profile sprite
-        profile.sprite = profileChoices[randomProfile];
-    }
-    
-    /*
     public void ChangeImageUp() // Go to next profile image
     {
         currentProfile++;
@@ -48,23 +38,22 @@ public class ProfileChanger : MonoBehaviour
         profile.sprite = profileChoices[currentProfile];
 
     }
-    */
     
     public void RemoveCurrentProfile()
     {
         // Remove this profile from the list
-        profileChoices.RemoveAt(randomProfile);
+        profileChoices.RemoveAt(currentProfile);
 
-        // Move automatically to another profile after removing
-        ChangeToRandomProfile();
-        profile.sprite = profileChoices[randomProfile];
+        // Move automatically to first profile after removing
+        currentProfile = 0;
+        profile.sprite = profileChoices[currentProfile];
     }
 
     public void WinChecker()
     {
         if (profileChoices.Count == 1)
         {
-            Debug.Log("These are the last two profiles, you win");
+            // Show text saying you matched them all
             winText.SetActive(true);
 
             // Stop player clicking match button again
@@ -72,5 +61,23 @@ public class ProfileChanger : MonoBehaviour
 
         }
     }
+
+    /*
+    public void ChangeToRandomProfile()
+    {
+        // Get a random profile
+        randomProfile = 1 + (randomProfile + Random.Range(0, profileChoices.Count));
+
+        // If the random profile number is bigger than profiles available, reset
+        if (randomProfile > profileChoices.Count) 
+        {
+            randomProfile -= profileChoices.Count;
+        }
+        
+        // Change the profile sprite
+        profile.sprite = profileChoices[randomProfile];
+    }
+
+    */
 
 }

@@ -404,7 +404,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 10dd0bccdce08824192ba608a4dd8555, type: 3}
   - {fileID: 21300000, guid: 41f82b99d1c267047a631cfc82e6284c, type: 3}
   - {fileID: 21300000, guid: 5351a67f0d60fb044b3fb5fc09daade9, type: 3}
-  randomProfile: 0
+  - {fileID: 21300000, guid: 5a4520f9ae586dc4598128ca4e018a3b, type: 3}
+  currentProfile: 0
   winText: {fileID: 1001851019}
   matchButton: {fileID: 0}
 --- !u!114 &721815992
@@ -574,7 +575,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 721815991}
         m_TargetAssemblyTypeName: ProfileChanger, Assembly-CSharp
-        m_MethodName: ChangeToRandomProfile
+        m_MethodName: ChangeImageUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -778,7 +779,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: These are the last two bees - and they look like a perfect match!
+  m_text: You matched them all!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1283,7 +1284,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2102311165}
         m_TargetAssemblyTypeName: ProfileChanger, Assembly-CSharp
-        m_MethodName: ChangeToRandomProfile
+        m_MethodName: ChangeImageUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1479,8 +1480,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   profileChanger1: {fileID: 2102311165}
   profileChanger2: {fileID: 721815991}
-  bee1: 0
-  bee2: 0
+  profile1: {fileID: 2102311163}
+  profile2: {fileID: 721815992}
   honey: 0
   honeyText: {fileID: 2067756393}
 --- !u!1 &1576838249
@@ -1568,7 +1569,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2102311165}
         m_TargetAssemblyTypeName: ProfileChanger, Assembly-CSharp
-        m_MethodName: ChangeToRandomProfile
+        m_MethodName: ChangeImageDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2451,7 +2452,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e13c9298cf141254e91724bead04230c, type: 3}
   - {fileID: 21300000, guid: 9b24dbae6bc8adf44857fa0e0eaeeaa4, type: 3}
   - {fileID: 21300000, guid: 64d4fdfaa8497284e8f903d171271ba6, type: 3}
-  randomProfile: 0
+  - {fileID: 21300000, guid: 5a4520f9ae586dc4598128ca4e018a3b, type: 3}
+  currentProfile: 0
   winText: {fileID: 1001851019}
   matchButton: {fileID: 1447450218}
 --- !u!1 &2145064747
@@ -2539,7 +2541,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 721815991}
         m_TargetAssemblyTypeName: ProfileChanger, Assembly-CSharp
-        m_MethodName: ChangeToRandomProfile
+        m_MethodName: ChangeImageDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
