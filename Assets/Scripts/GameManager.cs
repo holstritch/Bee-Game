@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     // instantiate 
     public PlayerEnergy _playerEnergy = new PlayerEnergy(100, 100);
     public PlayerHappy _playerHappy = new PlayerHappy(100, 100);
-    public PlayerHygeine _playerHygeine = new PlayerHygeine(100, 100);
+    public PlayerHygiene _playerHygiene = new PlayerHygiene(100, 100);
 
     void Awake()
     {
