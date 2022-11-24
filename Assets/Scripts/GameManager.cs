@@ -10,7 +10,10 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager { get; private set; }
 
     // instantiate 
-    public PlayerHealth _playerHealth = new PlayerHealth(100, 100);
+    public PlayerEnergy _playerEnergy = new PlayerEnergy(100, 100);
+    public PlayerHappy _playerHappy = new PlayerHappy(100, 100);
+    public PlayerHygeine _playerHygeine = new PlayerHygeine(100, 100);
+
     void Awake()
     {
         // deletes if another GameManager is accidentally made
