@@ -1,49 +1,73 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class MatchChecker : MonoBehaviour
 {
     public ProfileChanger profileChanger1;
     public ProfileChanger profileChanger2;
-    public int bee1;
-    public int bee2;
-
+    public Image profile1;
+    public Image profile2;
     public int honey = 0;
     public TextMeshProUGUI honeyText;
 
     
     public void CheckForMatch() 
     {
-        // Check which bee is in each slot
-        bee1 = profileChanger1.currentProfile;  
-        bee2 = profileChanger2.currentProfile; 
-        
-        // Check if the bees are a match or not
+        // Check for match based on sprite names
 
-        if(bee1 == bee2)
+        if (profile1.sprite.name == ("A1") && profile2.sprite.name == ("B1"))
         {
-            Debug.Log("It's a match!");
-            honey = honey + 100;
-            UpdateUI();
-            // Remove these bees from the array
-
-           
-
-            // Add win sound effect
+            Debug.Log("Match!");
+            OnMatch();
         }
 
-        if(bee1 != bee2)
+        else if (profile1.sprite.name == ("A2") && profile2.sprite.name == ("B2"))
+        {
+            Debug.Log("Match!");
+            OnMatch();
+        }
+
+        else if (profile1.sprite.name == ("A3") && profile2.sprite.name == ("B3"))
+        {
+            Debug.Log("Match!");
+            OnMatch();
+        }
+
+        else if (profile1.sprite.name == ("A4") && profile2.sprite.name == ("B4"))
+        {
+            Debug.Log("Match!");
+            OnMatch();
+        }
+
+        else if (profile1.sprite.name == ("A5") && profile2.sprite.name == ("B5"))
+        {
+            Debug.Log("Match!");
+            OnMatch();
+        }
+
+        else
         {
             Debug.Log("These two aren't a match.");
-            // Add incorrect sound effect
         }
+
+        // Check if these are the last two profiles to match
+        profileChanger1.WinChecker(); 
         
     }
 
-    private void UpdateUI() 
+    private void OnMatch() 
     {
-      honeyText.text = "Honey: " + honey;
+        // Increase honey
+        honey = honey + 100;
+
+        // Remove these profiles from the list
+        profileChanger1.RemoveCurrentProfile();
+        profileChanger2.RemoveCurrentProfile();
+
+        // Update UI text
+        honeyText.text = "Honey: " + honey;
     }
 }
