@@ -63,7 +63,7 @@ public class MatchChecker : MonoBehaviour
         // Increase honey
         honey = honey + 100;
 
-        // Remove these bees from the list
+        // Remove these profiles from the list
         profileChanger1.RemoveCurrentProfile();
         profileChanger2.RemoveCurrentProfile();
 
