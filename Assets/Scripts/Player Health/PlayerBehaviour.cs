@@ -6,7 +6,7 @@ public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField] HealthBar _energyBar;
     [SerializeField] HealthBar _happyBar;
-    [SerializeField] HealthBar _hygeineBar;
+    [SerializeField] HealthBar _hygieneBar;
 
     void Update()
     {
@@ -37,7 +37,7 @@ public class PlayerBehaviour : MonoBehaviour
     public void ToiletForHygeine()
     {
         HealHygeine(10);
-        Debug.Log(GameManager.gameManager._playerHygeine.Hygeine);
+        Debug.Log(GameManager.gameManager._playerHygiene.Hygiene);
     }
 
     // energy
@@ -68,12 +68,12 @@ public class PlayerBehaviour : MonoBehaviour
     // hygeine
     private void DamageHygeine(int damage)
     {
-        GameManager.gameManager._playerHygeine.DamageHygeine(damage);
-        _hygeineBar.SetHealth(GameManager.gameManager._playerHygeine.Hygeine);
+        GameManager.gameManager._playerHygiene.DamageHygiene(damage);
+        _hygieneBar.SetHealth(GameManager.gameManager._playerHygiene.Hygiene);
     }
     private void HealHygeine(int healing)
     {
-        GameManager.gameManager._playerHygeine.HealHygeine(healing);
-        _hygeineBar.SetHealth(GameManager.gameManager._playerHygeine.Hygeine);
+        GameManager.gameManager._playerHygiene.HealHygiene(healing);
+        _hygieneBar.SetHealth(GameManager.gameManager._playerHygiene.Hygiene);
     }
 }
